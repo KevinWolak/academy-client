@@ -1,0 +1,45 @@
+.app-martin form {
+  border-radius: 6px;
+  box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
+}
+
+.app {
+  border-radius: 6px;
+  background: #fbfbfb;
+  box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
+  width: 40rem;
+  height: 40rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+label {
+  float: left;
+  margin: 1rem;
+}
+
+.errorMsg {
+  max-width: 350px;
+  color: #f21e08;
+  padding: 2px 0;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+button {
+  background-color: #1877f2;
+  color: rgb(255, 255, 255);
+  margin: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  width: 200px;
+}
