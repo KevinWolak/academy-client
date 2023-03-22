@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import jwt_decode from "jwt-decode";
 
 const HomePage = () => {
   const {
@@ -42,7 +43,6 @@ const HomePage = () => {
     axios
       .post("http://localhost:3000/signin", data)
       .then((response) => {
-        console.log(response.data.token);
         Cookies.set("token", response.data.token);
         axios.defaults.headers.common["Authorization"] = `Bearer ${Cookies.get(
           "token"
