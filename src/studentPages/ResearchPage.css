@@ -1,0 +1,53 @@
+.research-page-container {
+  font-family: Arial, sans-serif;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 4rem;
+}
+
+.research-page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: maroon;
+}
+
+.research-page-image {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.research-publication {
+  margin-top: 20px;
+}
+
+.research-publication-title {
+  font-size: 20px;
+}
+
+.research-publication-link {
+  text-decoration: none;
+  color: maroon;
+  font-size: 1.2rem;
+  margin-left: 3rem;
+}
+
+.research-publication-link:hover {
+  text-decoration: underline;
+}
+
+.research-publication-abstract {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.research-author {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.index {
+  font-size: 1rem;
+}

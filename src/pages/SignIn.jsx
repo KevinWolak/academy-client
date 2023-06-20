@@ -1,10 +1,11 @@
-import { useState } from "react";
 import "./SignIn.css";
-import axios from "axios";
 import { useForm } from "react-hook-form";
 import Modal from "../Modal/modal";
+import { useDispatch } from "react-redux";
+import { createUser } from "../components/AcademySlice";
 
 const SignIn = (props) => {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -12,23 +13,13 @@ const SignIn = (props) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    console.log("Trigger onSubmit");
-    axios
-      .post("http://localhost:3000/user", data)
-      .then((response) => {
-        console.log(response);
+    dispatch(createUser(data))
+      .then(() => {
+        console.log("User created successfully");
         props.handleModalSubmit(false);
       })
       .catch((error) => {
-        if (error.response) {
-          console.log(error.response);
-          console.log("server responded");
-        } else if (error.request) {
-          console.log("network error");
-        } else {
-          console.log(error);
-        }
+        console.log("Error creating user:", error.message);
       });
   };
 

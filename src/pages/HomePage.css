@@ -8,78 +8,84 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 label {
   font-family: "Times New Roman", Times, serif;
-  font-size: 24px;
+  font-size: 18px;
   display: grid;
   grid-template-columns: repeat(1, 2fr);
-  grid-gap: 4px;
+  grid-gap: 2px;
 }
+
 .search-params {
-  width: 1300px;
+  width: 975px;
   margin: 0 auto;
-  margin-top: 12rem;
+  margin-top: 9rem;
 }
 
 .search-params form {
-  border-radius: 6px;
+  border-radius: 4px;
   background: #ffffff;
-  box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
-  width: 30rem;
-  height: 25rem;
-  margin: 0px 25px 0px 0px;
-  padding: 35px 15px 15px 15px;
+  box-shadow: 0px 0px 9px #aaa, -0px -0px 9px #fff;
+  width: 22.5rem;
+  height: 18.75rem;
+  margin: 0px 18.75px 0px 0px;
+  padding: 26.25px 11.25px 11.25px 11.25px;
   float: right;
+  margin-top: 2rem;
 }
+
 .log-in-button {
   background-color: #1877f2;
   color: rgb(255, 255, 255);
-  margin: 1rem;
+  margin: 0.75rem;
   border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  line-height: 48px;
-  padding: 0 16px;
-  width: 332px;
-  margin-left: 4rem;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 36px;
+  padding: 0 12px;
+  width: 249px;
+  margin-left: 3rem;
 }
+
 .create-account-button {
   background-color: #05bb14;
   color: rgb(255, 255, 255);
-  margin: 2px;
+  margin: 1px;
   border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  line-height: 48px;
-  padding: 0 16px;
-  width: 332px;
-  margin-left: 4rem;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 36px;
+  padding: 0 12px;
+  width: 249px;
+  margin-left: 3rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
+
 span {
   color: #1877f2;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 img {
-  width: 100;
+  width: 230px;
   height: 200px;
   display: flex;
-  margin-left: 2.5rem;
+  margin-left: 1.875rem;
 }
 
 .container {
-  margin-top: 4rem;
-  margin-left: 4rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
   display: inline-block;
 }
 
 #modal a {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 11.25px;
   text-decoration: none;
 }
 
@@ -102,14 +108,14 @@ img {
 
 #modal > div {
   background-color: white;
-  max-width: 800px;
-  padding: 15px;
+  max-width: 600px;
+  padding: 11.25px;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 22.5px;
   background-color: white;
 }
 
 #modal .buttons button {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 11.25px;
 }

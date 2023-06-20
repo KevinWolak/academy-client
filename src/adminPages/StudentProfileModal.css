@@ -1,0 +1,32 @@
+.student-profile {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.student-profile h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.profile-info div {
+  margin-bottom: 10px;
+}
+
+.profile-info strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.loading {
+  font-size: 20px;
+  text-align: center;
+  margin: 30px;
+}

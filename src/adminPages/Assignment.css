@@ -1,0 +1,102 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.assignment-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 8px;
+  max-width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.assignment-link:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.dashboard-title {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.assignment-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.assignment-deadline {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.assessment-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap; /* Ensure all text is on a single line */
+}
+
+.assessment-btn:hover {
+  background-color: #0b7dda;
+}
+
+.delete-assessment-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid rgb(231, 50, 50);
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-left: 2.2rem;
+}
+
+.delete-assessment-btn:hover {
+  background-color: rgb(245, 207, 207);
+  transform: scale(1.2);
+  box-shadow: 0 0 4px #111;
+  transition: 0.3s;
+}
+
+.delete-assessment-btn svg {
+  color: rgb(231, 50, 50);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}

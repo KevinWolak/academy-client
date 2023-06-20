@@ -1,15 +1,17 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./DashBoard.css";
+import StudentHomePage from "./StudentHomePage";
+import leaf from "../img/leaf.png";
 const DashBoard = () => {
   return (
     <nav className="nav">
       <ul>
-        <CustomLink className="site-title" to="/">
-          Home
+        <CustomLink className="site-title" to="/StudentHomePage">
+          <img src={leaf} alt="leaf" className="leaf" /> Wolak Academy
         </CustomLink>
-        <CustomLink to="/about">About me</CustomLink>
-        <CustomLink to="/contact"> Contact </CustomLink>
+        <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/Research">Research</CustomLink>
       </ul>
     </nav>
   );

@@ -6,26 +6,29 @@ import SignIn from "./SignIn";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import { useDispatch } from "react-redux";
+import { login, getAuth } from "../components/AcademySlice";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const [showModal, setShowModal] = useState(false);
-  let navigate = useNavigate();
 
   const closeModal = (e) => {
     setShowModal(e);
   };
 
   const handleModalSubmit = (e) => {
-    toast.success("Succefully Created User!", {
+    toast.success("Successfully Created User!", {
       position: "bottom-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -39,23 +42,24 @@ const HomePage = () => {
   };
 
   const loginHandler = (data) => {
-    console.log("data", data);
-    axios
-      .post("http://localhost:3000/signin", data)
+    dispatch(login(data))
       .then((response) => {
-        Cookies.set("token", response.data.token);
-        axios.defaults.headers.common["Authorization"] = `Bearer ${Cookies.get(
-          "token"
-        )}`;
-        axios
-          .get("http://localhost:3000/api/getAuth", data)
+        const token = response.payload.token;
+        Cookies.set("token", token);
+        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+        dispatch(getAuth())
           .then((response) => {
-            console.log(response);
-            if (response.data.user.role.name === "ADMIN") {
+            const user = response.payload;
+            if (user.role.name === "ADMIN") {
               navigate("/Admin/DashBoard");
             } else {
-              navigate("/DashBoard");
+              navigate("/StudentHomePage");
             }
+          })
+          .catch((error) => {
+            console.log(error);
+            // Handle error
           });
       })
       .catch((error) => {
@@ -84,7 +88,7 @@ const HomePage = () => {
           <input
             type="username"
             name="username"
-            placeholder="username"
+            placeholder="Enter: username"
             {...register("username", {
               required: true,
             })}
@@ -104,7 +108,7 @@ const HomePage = () => {
           <input
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="Enter: password"
             {...register("password", {
               required: true,
               validate: {
